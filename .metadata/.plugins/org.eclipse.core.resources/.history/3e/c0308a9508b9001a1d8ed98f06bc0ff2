@@ -1,0 +1,20 @@
+package com.yk;
+
+public class ArrayList {
+	int size = 0;
+	int [] elements;
+	static final int DEFAULT_CAPACITY = 10;
+	
+	public ArrayList(int size) {
+		elements = new int[size];
+	
+	}
+	public ArrayList() {
+		this(DEFAULT_CAPACITY);
+	}
+	
+	boolean isEmpty() {
+		return size == 0;
+	}
+	
+}

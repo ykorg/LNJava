@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://mybatis.org/dtd/mybatis-3-config.dtd" uri="file:///Users/yinyakun/Desktop/java资源/mybatis-3-mybatis-3.5.4/src/main/java/org/apache/ibatis/builder/xml/mybatis-config.xsd"/>
+  <uri name="http://mybatis.org/dtd/mybatis-3-mapper.dtd" uri="file:///Users/yinyakun/Desktop/java资源/mybatis-3-mybatis-3.5.4/src/main/java/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd"/>
+  <uri name="http://java.sun.com/xml/ns/j2ee" uri="file:/Users/yinyakun/Desktop/java资源/web-app_2_4.xsd"/>
+</catalog>

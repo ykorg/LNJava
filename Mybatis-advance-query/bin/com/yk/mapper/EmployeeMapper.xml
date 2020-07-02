@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yk.mapper.EmployeeMapper">
+
+<sql id="base_sql">
+	<where>
+		<if test="keyword!=null">
+			and name like CONCAT('%',#{keyword},'%')
+		</if>
+		<if test="minSalary!=null">
+			and salary>= #{minSalary}
+		</if>
+		<if test="maxSalary!=null">
+			and salary &lt;= #{maxSalary}
+		</if>
+		<if test="deptId>0">
+			and deptId=#{deptId}
+		</if>
+	</where>
+</sql>
+
+<select id="queryForList" parameterType="EmployeeQueryObject" resultType="Employee">
+	SELECT * FROM t_employee
+	<include refid="base_sql"/>
+</select>
+
+<select id="queryForSalary" parameterType="EmployeeQueryObject" resultType="Employee">
+	SELECT * FROM t_employee
+	<where>
+		<if test="minSalary!=null">
+			and salary>= #{minSalary}
+		</if>
+		<if test="maxSalary!=null">
+			and salary &lt;= #{maxSalary}
+		</if>
+	</where>
+</select>
+
+
+</mapper>
+
+<!-- concat('%','#{keyword}','%') -->

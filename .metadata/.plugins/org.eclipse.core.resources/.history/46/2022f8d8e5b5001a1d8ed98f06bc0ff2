@@ -1,0 +1,49 @@
+package 每周一道题;
+
+import java.util.Stack;
+
+public class _001_逆波兰表达式求值 {
+
+	/*
+	 * ["2", "1", "+", "3", "*"]
+	 * ["4","13","5","/","+"]
+	 */
+	public static int  evalPRN(String[] tokens) {
+		Stack<Integer> stack = new Stack<Integer>();
+		for (String token : tokens) {
+			switch (token) {
+			case "+":
+				stack.push(stack.pop() + stack.pop());
+				break;
+			case "*":
+				stack.push(stack.pop() * stack.pop());
+				break;
+			case "-":{
+				Integer right = stack.pop();
+				Integer left  = stack.pop();
+				stack.push(left-right);				
+				break;
+			}
+			case "/":{
+				Integer right = stack.pop();
+				Integer left  = stack.pop();
+				stack.push(left/right);
+				break;
+			}
+			default:
+				stack.push(Integer.parseInt(token));
+				break;
+			}
+		}
+		return stack.pop();
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		System.out.println("每周一道算法题");
+ 		String[] arr1 = new String[] {"2", "1", "+", "3", "*"};
+ 		System.out.println( evalPRN(arr1) );
+	}
+		
+}

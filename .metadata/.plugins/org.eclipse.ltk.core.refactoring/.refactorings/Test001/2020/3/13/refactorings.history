@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;public static void test1()&apos; from &apos;com.yk.Tools.main()&apos; to &apos;com.yk.Tools&apos;&#x0A;- Original project: &apos;Test001&apos;&#x0A;- Method name: &apos;test1&apos;&#x0A;- Destination type: &apos;com.yk.Tools&apos;&#x0A;- Declared visibility: &apos;public&apos;" comments="false" description="Extract method &apos;test1&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;com.yk{Tools.java" name="test1" replace="false" selection="85 161" stamp="1584929646405" version="1.0" visibility="1"/>
+</session>

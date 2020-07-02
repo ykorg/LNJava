@@ -1,0 +1,8 @@
+contextsDir=/Users/yinyakun/Library/tomcat7/conf/Catalina/localhost
+eclipse.preferences.version=1
+managerUrl=http\://localhost\:8080/manager
+projectsInSourcePath=EasyMVC;
+tomcatConfigFile=/Users/yinyakun/Library/tomcat7/conf/server.xml
+tomcatDir=/Users/yinyakun/Library/tomcat7
+tomcatJRE=com.oracle.java.8u181.jdk
+tomcatVersion=tomcatV9

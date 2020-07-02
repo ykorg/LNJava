@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<properties resource="db.properties" />
+	
+	<typeAliases>
+  		<!-- <typeAlias alias="User" type="com.yk.User"/> -->
+  		<!-- 指定一个包名 一般指定到domain 就可以 ,会使用 简单类名 的首字母小写的非限定类名来作为它的别名 -->
+  		<package name="com.yk"/>
+  	</typeAliases>
+
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}" />
+        <property name="username" value="${username}" />
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper  class="com.yk.UserMapper" />
+  </mappers>
+  
+  
+</configuration>
